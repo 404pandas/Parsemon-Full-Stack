@@ -1,0 +1,118 @@
+/* ============================================================ *\
+*                 Parsemon Full Stack Stylesheet                 *
+*              Formatted CSS built by Mary Elenius               *
+*             https://www.linkedin.com/in/404pandas              *
+*                         04/29/2024                             *
+\* -----------------------------------------------------------  */
+
+/*                     Table of Contents:                       *\
+
+* UNIVERSAL & VARIABLES
+  ## Universal Selectors
+  ## Color Variables
+
+* TYPOGRAPHY 
+
+* ELEMENTS
+
+* TYPOGRAPHY 
+
+* COMPONENTS
+ ## Component One
+ ## Component Two
+ ## Component Three
+ ## Component Four
+
+* HELPERS
+
+* MEDIA QUERIES
+ ## Mobile Devices <= 600px
+ ## Tablet Devices > 600px
+ ## Desktop Devices > 992px
+ ## Large Desktop Devices > 1200px
+
+/* ============================================================ *\
+*                     Universal & Variables                      *
+\* -----------------------------------------------------------  */
+
+/* --------------      Universal Selectors       -------------- */
+
+/* ----------------      Color Variables       ---------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+/*       Color variables for easy selection throughout CSS      */
+:root {
+  --dark-blue: #282483;
+  --yelow: #fbd333;
+  --light-blue: #bdbfd6;
+  --red: #c93c29;
+  --light-gray: #b3b4b6;
+  --dark-gray: #545456;
+}
+
+/* ============================================================ *\
+*                          Typography                            *
+\* -----------------------------------------------------------  */
+
+@font-face {
+  font-family: "Pokemon GB";
+  src: url("../fonts/Pokemon_GB.eot") format("eot"),
+    url("../fonts/Pokemon_GB.woff") format("woff"),
+    url("../fonts/Pokemon_GB.ttf") format("truetype"),
+    url("../fonts/Pokemon_GB.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ============================================================ *\
+*                           Elements                             *
+\* -----------------------------------------------------------  */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 20px auto;
+  width: 94%;
+}
+
+/* ============================================================ *\
+*                          Components                            *
+\* -----------------------------------------------------------  */
+
+/* ============================================================ *\
+*                           Helpers                              *
+\* -----------------------------------------------------------  */
+
+/* ============================================================ *\
+*      Media Queries (Alphabetical by screen size break          *
+\* -----------------------------------------------------------  */
+
+/* ----------       Mobile Devices <= 600px S       ------------ */
+
+@media only screen and (max-width: 599px) {
+}
+
+/* ----------       Tablet Devices > 600px M      ------------- */
+
+@media only screen and (max-width: 600px) {
+}
+
+/* ----------       Desktop Devices > 992px L     ------------- */
+
+@media only screen and (max-width: 992px) {
+}
+
+/* ------       Large Desktop Devices > 1200px  XL      ------ */
+
+@media only screen and (max-width: 1200px) {
+}

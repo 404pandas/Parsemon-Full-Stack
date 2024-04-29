@@ -1,0 +1,47 @@
+<div>
+  <article>
+    <div>
+      <h2>{{data.title}}</h2>
+      <div>
+        Posted by {{data.user.username}} on {{formatDate data.createdAt}}
+      </div>
+    </div>
+    <div>
+      {{data.body}}
+    </div>
+  </article>
+
+  {{#if data.dataExtensions}}
+
+  <section>
+    <div>
+      <h3>Data Extensions</h3>
+    </div>
+
+    <div>
+      {{#each data.dataExtensions as |dataExtension|}}
+      {{> dataExtensions}}
+      {{/each}}
+    </div>
+  </section>
+  {{/if}}
+
+  <form id="new-comment-form">
+    <div>
+      <h3>Add New Data Extension</h3>
+    </div>
+
+    <div>
+      <input type="hidden" name="data-id" value="{{data.id}}" />
+
+      <label class="form-label" for="comment-body">Comment</label>
+
+      <textarea name="comment-body" class="form-input"></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </form>
+
+</div>
+
+<script src="/js/comment.js"></script>
