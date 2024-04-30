@@ -1,17 +1,20 @@
-<div class="datas">
-  {{#each datas}}
-  <article class="card">
-    <div class="card-header flex-row justify-space-between">
-      <h2>
-        <a href="/data/{{id}}">{{title}}</a>
-      </h2>
+<div>
+  {{#each data}}
+    <article>
       <div>
-        Posted by {{user.username}} on {{formatDate createdAt}}
+        <h2>
+          <a href='/data/{{id}}'>{{title}}</a>
+        </h2>
+        <div>
+          Posted by
+          {{user.username}}
+          on
+          {{formatDate createdAt}}
+        </div>
       </div>
-    </div>
-    <div class="card-body">
-      {{body}}
-    </div>
-  </article>
+      <div>
+        {{body}}
+      </div>
+    </article>
   {{/each}}
 </div>

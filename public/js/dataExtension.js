@@ -1,14 +1,16 @@
-const commentFormHandler = async function (event) {
+const dataExtensionFormHandler = async function (event) {
   event.preventDefault();
 
-  const postId = document.querySelector('input[name="post-id"]').value;
-  const body = document.querySelector('textarea[name="comment-body"]').value;
+  const dataId = document.querySelector('input[name="data-id"]').value;
+  const body = document.querySelector(
+    'textarea[name="dataExtension-body"]'
+  ).value;
 
   if (body) {
-    const response = await fetch('/api/comments', {
+    const response = await fetch('/api/dataExtension', {
       method: 'POST',
       body: JSON.stringify({
-        postId,
+        dataId,
         body,
       }),
       headers: {
@@ -25,5 +27,5 @@ const commentFormHandler = async function (event) {
 };
 
 document
-  .querySelector('#new-comment-form')
-  .addEventListener('submit', commentFormHandler);
+  .querySelector('#new-dataExtension-form')
+  .addEventListener('submit', dataExtensionFormHandler);
