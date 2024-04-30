@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Post, Comment, User } = require('../models/');
+const { Data, DataExtension, User } = require('../models/');
 const { withGuard, withoutGuard } = require('../utils/authGuard');
 
 router.get('/', async (req, res) => {
   try {
-    const dataData = await Post.findAll({
+    const dataData = await Data.findAll({
       include: [User],
     });
 
@@ -18,11 +18,11 @@ router.get('/', async (req, res) => {
 
 router.get('/data/:id', async (req, res) => {
   try {
-    const dataData = await Post.findByPk(req.params.id, {
+    const dataData = await Data.findByPk(req.params.id, {
       include: [
         User,
         {
-          model: Comment,
+          model: DataExtension,
           include: [User],
         },
       ],
