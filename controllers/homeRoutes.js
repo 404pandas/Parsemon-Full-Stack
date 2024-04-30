@@ -30,7 +30,7 @@ router.get('/data/:id', async (req, res) => {
 
     if (dataData) {
       const data = dataData.get({ plain: true });
-
+      console.log(data);
       res.render('data', { data, loggedIn: req.session.logged_in });
     } else {
       res.status(404).end();

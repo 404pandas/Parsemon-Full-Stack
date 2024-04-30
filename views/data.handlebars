@@ -11,20 +11,30 @@
     </div>
   </article>
 
-  {{#if data.dataExtensions}}
+
 
   <section>
     <div>
       <h3>Data Extensions</h3>
     </div>
-
+  {{#if data.dataExtensions}}
     <div>
       {{#each data.dataExtensions as |dataExtension|}}
       {{> dataExtensions}}
       {{/each}}
     </div>
-  </section>
+      {{else}}
+      <div>
+        <p>No Data Extensions</p>
+      </div>
   {{/if}}
+  </section>
+
+
+
+
+
+
 
   <form id="new-dataExtension-form">
     <div>

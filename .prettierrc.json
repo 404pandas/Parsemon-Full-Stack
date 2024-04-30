@@ -1,3 +1,19 @@
 {
-  "singleQuote": true
+  "singleQuote": true,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "semi": false,
+  "printWidth": 100,
+  "useTabs": false,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": "**/*.{hbs}",
+      "options": {
+        "parser": "glimmer"
+      }
+    }
+  ]
 }

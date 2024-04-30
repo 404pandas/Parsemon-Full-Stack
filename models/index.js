@@ -8,7 +8,7 @@ Data.belongsTo(User, {
 });
 
 User.hasMany(Data, {
-  foreignKey: 'dataId',
+  foreignKey: 'userId',
   onDelete: 'CASCADE',
 });
 
@@ -17,12 +17,17 @@ Data.hasMany(DataExtension, {
   onDelete: 'CASCADE',
 });
 
-Data.belongsTo(User, {
+User.hasMany(DataExtension, {
   foreignKey: 'userId',
   onDelete: 'CASCADE',
 });
 
-User.hasMany(DataExtension, {
+DataExtension.belongsTo(Data, {
+  foreignKey: 'dataId',
+  onDelete: 'CASCADE',
+});
+
+DataExtension.belongsTo(User, {
   foreignKey: 'userId',
   onDelete: 'CASCADE',
 });
