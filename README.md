@@ -79,37 +79,69 @@ This project was built with vanilla JS/CSS/HTML, materialize css, bcrypt, socket
 [![HTML](https://img.shields.io/badge/Language-HTML-ff8000?style=plastic&logo=HTML5&logoWidth=10)](https://html.com/)
 [![CSS](https://img.shields.io/badge/Language-CSS-ffff00?style=plastic&logo=HTML5&logoWidth=10)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Materialize](https://img.shields.io/badge/Framework-Materialize-80ff00?style=plastic&logo=jQuery&logoWidth=10)](https://materializecss.com/)
+
 <!-- bcrypt -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- connect-session-sequelize -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- dotenv -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- express -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- express-handlebars -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- express-session -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- pg -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- sequelize -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- eslint -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- eslint-config-prettier -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- nodemon -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- prettier -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- socket.io -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- draggable.js -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- GSAP -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
+
 <!-- Render -->
+
 [![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
 [![VS Code](https://img.shields.io/badge/IDE-VSCode-0000ff?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://code.visualstudio.com/docs)
 [![PokemonTCGApi](https://img.shields.io/badge/API-PokemonTCG-8000ff?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://pokemontcg.io/)
@@ -176,62 +208,78 @@ Once the app is functional, screenshots will be added in this section.
 #### MVP
 
 - [ ] Front End
+
+  - [x] Skeleton
+  - [x] Routing
   - [ ] Landing Page
     - [ ] Wireframe
     - [ ] General Layout
     - [ ] UI interacting with back end
     - [ ] Final Styling
   - [ ] TCG
-    - [ ] Landing Page
+    - [ ] Wireframe
+    - [x] General Layout
+    - [ ] UI interacting with back end
+    - [ ] Final Styling
+  - [ ] Random Duel
     - [ ] Wireframe
     - [ ] General Layout
     - [ ] UI interacting with back end
     - [ ] Final Styling
-  - [ ] Random Duel
-    - [ ] Landing Page
+  - [ ] Login
+    - [ ] Wireframe
+    - [ ] General Layout
+    - [ ] UI interacting with back end
+    - [ ] Final Styling
+  - [ ] Signup
+    - [ ] Wireframe
+    - [ ] General Layout
+    - [ ] UI interacting with back end
+    - [ ] Final Styling
+  - [ ] Error
     - [ ] Wireframe
     - [ ] General Layout
     - [ ] UI interacting with back end
     - [ ] Final Styling
   - [ ] Deck Builder
-    - [ ] Landing Page
     - [ ] Wireframe
     - [ ] General Layout
     - [ ] UI interacting with back end
     - [ ] Final Styling
   - [ ] About Us
-    - [ ] Landing Page
     - [ ] Wireframe
     - [ ] General Layout
     - [ ] UI interacting with back end
     - [ ] Final Styling
   - [ ] Personal Profile
-    - [ ] Landing Page
     - [ ] Wireframe
     - [ ] General Layout
     - [ ] UI interacting with back end
     - [ ] Final Styling
   - [ ] Other User's Profile
-    - [ ] Landing Page
     - [ ] Wireframe
     - [ ] General Layout
     - [ ] UI interacting with back end
     - [ ] Final Styling
   - [ ] Random Duel
-    - [ ] Landing Page
     - [ ] Wireframe
     - [ ] General Layout
     - [ ] UI interacting with back end
     - [ ] Final Styling
 
-
 - [ ] Milk Men Teamwork
-    - [ ] Discuss Wireframes
-    - [ ] Discuss using Figma KanBan for students to see an example of alternative to Github
-    - [ ] Discuss model architecture 
-    - [ ] Connect back end to front end
+
+  - [x] Server
+  - [ ] Discuss Wireframes
+  - [ ] Discuss using Figma KanBan for students to see an example of alternative to Github
+  - [ ] Discuss model architecture
+  - [ ] Connect back end to front end
 
 - [ ] Back End
+  - [x] Skeleton
+  - [x] Database connected
+  - [x] Auth
+  - [x] Bcrypt
   - [ ] Models created
   - [ ] Relations added
   - [ ] Seeds created

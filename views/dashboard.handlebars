@@ -1,26 +1,29 @@
 <div>
-  {{#each datas}}
-    <a href='/dashboard//edit/{{id}}'>
-      <span>{{title}}</span>
-      <span>{{formatDate createdAt}}</span>
-    </a>
-    <button type='submit'>Update</button>
+  <div>
+    {{#each datas}}
+      <a href='/dashboard//edit/{{id}}'>
+        <span>{{title}}</span>
+        <span>{{formatDate createdAt}}</span>
+      </a>
+      <button type='submit'>Update</button>
 
-    <button type='button' id='delete-btn'>Delete</button>
+      <button type='button' id='delete-btn'>Delete</button>
 
-  {{/each}}
-</div>
-<div>
-  {{#each dataExtensions}}
-    <a href='/dashboard/dataExtension/edit/{{id}}'>
-      <span>{{title}}</span>
-      <span>{{formatDate createdAt}}</span>
-    </a>
-    <button type='submit'>Update</button>
+    {{/each}}
+  </div>
+  <div>
+    {{#each dataExtensions}}
+      <a href='/dashboard/dataExtension/edit/{{id}}'>
+        <span>{{title}}</span>
+        <span>{{formatDate createdAt}}</span>
+      </a>
+      <button type='submit'>Update</button>
 
-    <button type='button' id='delete-btn'>Delete</button>
+      <button type='button' id='delete-btn'>Delete</button>
 
-  {{/each}}
+    {{/each}}
+  </div>
+  <div><p>Deck Builder will go here</p></div>
 </div>
 <script src='../public/js/editData.js'></script>
 <script src='../public/js/editDataExtension.js'></script>

@@ -5,29 +5,34 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Parsemon</title>
     <link rel='stylesheet' href='/css/normalize.css' />
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'
+    />
+    <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' />
     <link rel='stylesheet' href='/css/style.css' />
+
   </head>
 
   <body>
     <nav>
       <ul>
         <li><a href='/'>Home</a></li>
-        <li><a href='/example'>Example</a></li>
         {{#if loggedIn}}
+          <li><a href='/game'>TCG</a></li>
+          <li><a href='/deckbuilder'>Deckbuilder</a></li>
+
           <li><a href='/dashboard' id='dashboard'>Dashboard</a></li>
 
           <li><a href='#' id='logout'>Logout</a></li>
         {{else}}
           <li><a href='/login'>Login</a></li>
         {{/if}}
+        <li><a href='/about'>?</a></li>
       </ul>
     </nav>
     <header>
-      {{#if dashboard}}
-        <h1><a href='/dashboard'>Your Dashboard</a></h1>
-      {{else}}
-        <h1><a href='/'>Parsemon</a></h1>
-      {{/if}}
+      {{! header content will go here }}
     </header>
 
     <main>
@@ -47,6 +52,10 @@
     {{#if loggedIn}}
       <script src='/js/logout.js'></script>
     {{/if}}
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'
+    ></script>
+
   </body>
 
 </html>
