@@ -1,6 +1,6 @@
-const router = require('express').Router();
-const { Data } = require('../models');
-const { withGuard } = require('../utils/authGuard');
+const router = require('express').Router()
+const { Data, DataExtension } = require('../models')
+const { withGuard } = require('../utils/authGuard')
 
 router.get('/', withGuard, async (req, res) => {
   try {
@@ -8,45 +8,65 @@ router.get('/', withGuard, async (req, res) => {
       where: {
         userId: req.session.user_id,
       },
-    });
+    })
 
-    const datas = dataData.map((data) => data.get({ plain: true }));
+    const datas = dataData.map((data) => data.get({ plain: true }))
 
     res.render('dashboard', {
       dashboard: true,
       datas,
       loggedIn: req.session.logged_in,
-    });
+    })
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err)
   }
-});
+})
 
 router.get('/new', withGuard, (req, res) => {
   res.render('newData', {
     dashboard: true,
     loggedIn: req.session.logged_in,
-  });
-});
+  })
+})
 
 router.get('/edit/:id', withGuard, async (req, res) => {
   try {
-    const dataData = await Data.findByPk(req.params.id);
+    const dataData = await Data.findByPk(req.params.id)
 
     if (dataData) {
-      const data = dataData.get({ plain: true });
+      const data = dataData.get({ plain: true })
 
       res.render('editData', {
         dashboard: true,
         data,
         loggedIn: req.session.logged_in,
-      });
+      })
     } else {
-      res.status(404).end();
+      res.status(404).end()
     }
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err)
   }
-});
+})
 
-module.exports = router;
+router.get('/dataExtension/edit/:id', withGuard, async (req, res) => {
+  try {
+    const dataExtensionData = await DataExtension.findByPk(req.params.id)
+    console.log(dataExtensionData)
+    if (dataExtensionData) {
+      const dataExtension = dataExtensionData.get({ plain: true })
+
+      res.render('editDataExtension', {
+        dashboard: true,
+        dataExtension,
+        loggedIn: req.session.logged_in,
+      })
+    } else {
+      res.status(404).end()
+    }
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+
+module.exports = router

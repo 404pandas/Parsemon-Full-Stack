@@ -2,7 +2,13 @@
   <p>
     {{body}}
   </p>
+  <a href='/dashboard/dataExtension/edit/{{id}}'>
+    <span>{{title}}</span>
+    <span>{{formatDate createdAt}}</span>
+  </a>
   <p>
-    &mdash; {{user.username}}, {{formatDate createdAt}}
+    &mdash;
+    {{user.username}},
+    {{formatDate createdAt}}
   </p>
 </div>
