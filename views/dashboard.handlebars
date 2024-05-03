@@ -1,0 +1,8 @@
+<div>
+  {{#each data}}
+  <a href="/dashboard/edit/{{id}}">
+    <span>{{title}}</span>
+    <span>{{formatDate createdAt}}</span>
+  </a>
+  {{/each}}
+</div>

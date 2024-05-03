@@ -1,0 +1,51 @@
+<html lang='en'>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Parsemon</title>
+<link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+
+  <body >
+    <nav>
+      <ul>
+        <li ><a href='/'>Home</a></li>
+        <li><a href='/example'>Example</a></li>
+        {{#if loggedIn}}
+          <li><a href='#' id='logout'>Logout</a></li>
+        {{else}}
+          <li><a href='/login'>Login</a></li>
+        {{/if}}
+      </ul>
+    </nav>
+    <header>
+      {{!-- TODO- build out dashboard once routing is set up, probably first issue for ME --}}
+      {{#if dashboard}}
+        <h1><a href='/dashboard'>Your Dashboard</a></h1>
+      {{else}}
+        <h1><a href='/'>Parsemon</a></h1>
+      {{/if}}
+    </header>
+
+    <main>
+      {{{body}}}
+    </main>
+
+    {{#if dashboard}}
+      <footer>
+        <a href='/dashboard/new'>➕ New Data</a>
+      </footer>
+    {{else}}
+      <footer>
+        &copy; The Milkmen
+      </footer>
+    {{/if}}
+
+    {{#if loggedIn}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+  </body>
+
+</html>

@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS parsemon_db;
+CREATE DATABASE parsemon_db;

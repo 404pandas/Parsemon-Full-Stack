@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <h2>Edit Data</h2>
+  </div>
+  <form id='edit-data-form'>
+    <input type='hidden' name='data-id' value='{{data.id}}' />
+
+    <label for='data-title'>Book Title</label>
+    <input type='text' name='data-title' value='{{data.title}}' />
+
+    <label for='data-body'>Book Description</label>
+    <textarea name='data-body'>{{data.body}}</textarea>
+
+    <button type='submit'>Update</button>
+
+    <button type='button' id='delete-btn'>Delete</button>
+  </form>
+</div>
+
+<script src='/js/editData.js'></script>
