@@ -1,59 +1,59 @@
-const router = require('express').Router();
-const { Post, Comment, User } = require('../models/');
-const { withGuard, withoutGuard } = require('../utils/authGuard');
+const router = require('express').Router()
+const { Data, DataExtension, User } = require('../models/')
+const { withGuard, withoutGuard } = require('../utils/authGuard')
 
 router.get('/', async (req, res) => {
   try {
-    const dataData = await Post.findAll({
+    const dataData = await Data.findAll({
       include: [User],
-    });
+    })
 
-    const datas = dataData.map((data) => data.get({ plain: true }));
+    const datas = dataData.map((data) => data.get({ plain: true }))
 
-    res.render('home', { datas, loggedIn: req.session.logged_in });
+    res.render('home', { datas, loggedIn: req.session.logged_in })
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err)
   }
-});
+})
 
 router.get('/data/:id', async (req, res) => {
   try {
-    const dataData = await Post.findByPk(req.params.id, {
+    const dataData = await Data.findByPk(req.params.id, {
       include: [
         User,
         {
-          model: Comment,
+          model: DataExtension,
           include: [User],
         },
       ],
-    });
+    })
 
     if (dataData) {
-      const data = dataData.get({ plain: true });
-
-      res.render('data', { data, loggedIn: req.session.logged_in });
+      const data = dataData.get({ plain: true })
+      console.log(data.DataExtensions)
+      res.render('data', { data, loggedIn: req.session.logged_in })
     } else {
-      res.status(404).end();
+      res.status(404).end()
     }
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err)
   }
-});
+})
 
 router.get('/login', withoutGuard, (req, res) => {
   try {
-    res.render('login');
+    res.render('login')
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err)
   }
-});
+})
 
 router.get('/signup', withoutGuard, (req, res) => {
   try {
-    res.render('signup');
+    res.render('signup')
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err)
   }
-});
+})
 
-module.exports = router;
+module.exports = router

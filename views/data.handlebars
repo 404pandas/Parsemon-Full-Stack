@@ -1,4 +1,7 @@
-<div>
+<div>      <script>
+
+      console.log(JSON.stringify({{data}}))
+      </script>
   <article>
     <div>
       <h2>{{data.title}}</h2>
@@ -11,20 +14,32 @@
     </div>
   </article>
 
-  {{#if data.dataExtensions}}
+
+
+
 
   <section>
     <div>
       <h3>Data Extensions</h3>
     </div>
-
-    <div>
-      {{#each data.dataExtensions as |dataExtension|}}
+  {{#if data.dataextensions}}
+   <div>
+      {{#each data.dataextensions as |dataExtension|}}
       {{> dataExtensions}}
       {{/each}}
     </div>
-  </section>
+      {{else}}
+  
+      <div>
+        <p>No Data Extensions</p>
+      </div>
   {{/if}}
+  </section>
+
+
+
+
+
 
   <form id="new-dataExtension-form">
     <div>
