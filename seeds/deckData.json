@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Charizard Deck",
+    "userId": 1,
+    "cards": [
+      { "name": "Charizard", "quantity": 3, "type": "Pokémon" },
+      { "name": "Charmander", "quantity": 4, "type": "Pokémon" },
+      { "name": "Charmeleon", "quantity": 3, "type": "Pokémon" },
+      { "name": "Fire Energy", "quantity": 15, "type": "Energy" },
+      { "name": "Professor's Research", "quantity": 4, "type": "Trainer" },
+      { "name": "Poké Ball", "quantity": 4, "type": "Trainer" }
+    ]
+  },
+  {
+    "name": "Pikachu Deck",
+    "userId": 1,
+    "cards": [
+      { "name": "Pikachu", "quantity": 3, "type": "Pokémon" },
+      { "name": "Raichu", "quantity": 2, "type": "Pokémon" },
+      { "name": "Electabuzz", "quantity": 3, "type": "Pokémon" },
+      { "name": "Lightning Energy", "quantity": 15, "type": "Energy" },
+      { "name": "Potion", "quantity": 4, "type": "Trainer" },
+      { "name": "Switch", "quantity": 4, "type": "Trainer" }
+    ]
+  },
+  {
+    "name": "Blastoise Deck",
+    "userId": 2,
+    "cards": [
+      { "name": "Blastoise", "quantity": 3, "type": "Pokémon" },
+      { "name": "Squirtle", "quantity": 4, "type": "Pokémon" },
+      { "name": "Wartortle", "quantity": 3, "type": "Pokémon" },
+      { "name": "Water Energy", "quantity": 15, "type": "Energy" },
+      { "name": "Gust of Wind", "quantity": 4, "type": "Trainer" },
+      { "name": "Energy Retrieval", "quantity": 4, "type": "Trainer" }
+    ]
+  },
+  {
+    "name": "Eevee Deck",
+    "userId": 3,
+    "cards": [
+      { "name": "Eevee", "quantity": 3, "type": "Pokémon" },
+      { "name": "Vaporeon", "quantity": 2, "type": "Pokémon" },
+      { "name": "Jolteon", "quantity": 2, "type": "Pokémon" },
+      { "name": "Flareon", "quantity": 2, "type": "Pokémon" },
+      { "name": "Eevee (VMAX)", "quantity": 2, "type": "Pokémon" },
+      { "name": "Eevee (GX)", "quantity": 2, "type": "Pokémon" },
+      { "name": "Eevee (EX)", "quantity": 2, "type": "Pokémon" },
+      { "name": "Energy Evolution", "quantity": 4, "type": "Trainer" }
+    ]
+  },
+  {
+    "name": "Mewtwo Deck",
+    "userId": 4,
+    "cards": [
+      { "name": "Mewtwo", "quantity": 3, "type": "Pokémon" },
+      { "name": "Mew", "quantity": 2, "type": "Pokémon" },
+      { "name": "Psychic Energy", "quantity": 15, "type": "Energy" },
+      { "name": "Misty's Determination", "quantity": 4, "type": "Trainer" },
+      { "name": "Bill's Analysis", "quantity": 4, "type": "Trainer" },
+      { "name": "Energy Retrieval", "quantity": 4, "type": "Trainer" }
+    ]
+  }
+]
