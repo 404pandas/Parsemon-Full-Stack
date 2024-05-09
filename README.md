@@ -241,11 +241,6 @@ Once the app is functional, screenshots will be added in this section.
     - [ ] General Layout
     - [ ] UI interacting with back end
     - [ ] Final Styling
-  - [ ] Deck Builder
-    - [ ] Wireframe
-    - [ ] General Layout
-    - [ ] UI interacting with back end
-    - [ ] Final Styling
   - [ ] About Us
     - [ ] Wireframe
     - [ ] General Layout
@@ -290,8 +285,18 @@ Once the app is functional, screenshots will be added in this section.
 
 - [ ] Add/Remove friends
 - [ ] Chat
+  - [ ] Wireframe
+  - [ ] General Layout
+  - [ ] UI interacting with back end
+  - [ ] Final Styling
 - [ ] Block users
 - [ ] Unique Pokemon Page
+- [ ] Migrating deck builder from localStorage to session storage (might need to make a function to unique ID this out)
+- [ ] Deck Builder
+  - [ ] Wireframe
+  - [ ] General Layout
+  - [ ] UI interacting with back end
+  - [ ] Final Styling
 
 See the [open issues](https://github.com/404pandas/Parsemon-Full-Stack/issues) for a full list of proposed features (and known issues).
 
