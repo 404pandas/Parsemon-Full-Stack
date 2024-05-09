@@ -44,7 +44,7 @@ const DeckCard = sequelize.define('DeckCard', {
   },
 })
 
-Deck.belongsToMany(Card, { through: DeckCard, as: 'DeckCards' })
+Deck.hasMany(Card, { through: DeckCard, as: 'DeckCards' })
 Card.belongsToMany(Deck, { through: DeckCard })
 Deck.belongsTo(User, {
   as: 'Owner',
