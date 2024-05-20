@@ -1,7 +1,7 @@
 const router = require('express').Router()
-const { Data } = require('../../models/')
+const { Deck } = require('../../models/')
 const { apiGuard } = require('../../utils/authGuard')
-// Updating deck - drag in drag out?
+// Updating deck - drag in drag out on right hand side
 router.put('/:id', apiGuard, async (req, res) => {
   try {
     const [affectedRows] = await Data.update(req.body, {

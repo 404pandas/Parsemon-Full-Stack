@@ -16,7 +16,7 @@
 
 <div align="center">
   <a href="https://github.com/404pandas/Parsemon-Full-Stack">
-    <img src="./assets/images/logo-main.svg" alt="Logo" width="80" height="80">
+    <img src="./public/images/logo-main.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Parsemon- Full Stack</h3>
@@ -77,75 +77,7 @@ This project was built with vanilla JS/CSS/HTML, materialize css, bcrypt, socket
 
 [![Javascript](https://img.shields.io/badge/Language-JavaScript-ff0000?style=plastic&logo=JavaScript&logoWidth=10)](https://javascript.info/)
 [![HTML](https://img.shields.io/badge/Language-HTML-ff8000?style=plastic&logo=HTML5&logoWidth=10)](https://html.com/)
-[![CSS](https://img.shields.io/badge/Language-CSS-ffff00?style=plastic&logo=HTML5&logoWidth=10)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Materialize](https://img.shields.io/badge/Framework-Materialize-80ff00?style=plastic&logo=jQuery&logoWidth=10)](https://materializecss.com/)
-
-<!-- bcrypt -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- connect-session-sequelize -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- dotenv -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- express -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- express-handlebars -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- express-session -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- pg -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- sequelize -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- eslint -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- eslint-config-prettier -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- nodemon -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- prettier -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- socket.io -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- draggable.js -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- GSAP -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-
-<!-- Render -->
-
-[![Name](https://img.shields.io/badge/Type-Name-80ff00?style=plastic&logo=LogoName&logoWidth=10)](https://librarydocs.com/)
-[![VS Code](https://img.shields.io/badge/IDE-VSCode-0000ff?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://code.visualstudio.com/docs)
-[![PokemonTCGApi](https://img.shields.io/badge/API-PokemonTCG-8000ff?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://pokemontcg.io/)
-[![jQuery](https://img.shields.io/badge/API-jQuery-ff00ff?style=plastic&logo=jQuery&logoWidth=10)](https://jquery.com/)
+[![CSS](https://img.shields.io/badge/Language-CSS-ffff00?style=plastic&logo=HTML5&logoWidth=10)](https://developer.mozilla.org/en-US/docs/Web/CSS)[![Materialize](https://img.shields.io/badge/Framework-Materialize-80ff00?style=plastic&logo=jQuery&logoWidth=10)](https://materializecss.com/)[![Bcrypt](https://img.shields.io/badge/Package-Bcrypt-00ff00?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/bcrypt)[![Connect Session Sequelize](https://img.shields.io/badge/Package-ConnectSessionSequelize-00ff80?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/connect-session-sequelize/)[![Dotenv](https://img.shields.io/badge/Package-Dotenv-00ffff?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/dotenv/)[![Express.js](https://img.shields.io/badge/Middleware-Express-0080ff?style=plastic&logo=express&logoWidth=10)](https://expressjs.com/)[![Express Handlebars](https://img.shields.io/badge/Package-ExpressHandlebars-0000ff?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/express-handlebars/)[![Express Session](https://img.shields.io/badge/Package-ExpressSession-8000ff?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/express-session/)[![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-ff00ff?style=plastic&logo=postgresql&logoWidth=10)](https://postgresql.org/)[![Sequelize](https://img.shields.io/badge/ORM-Sequelize-ff0080?style=plastic&logo=sequelize&logoWidth=10)](https://sequelize.org//)[![Eslint](https://img.shields.io/badge/Package-Eslint-ff00ff?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/eslint/)[![Nodemon](https://img.shields.io/badge/Package-Nodemon-8000ff?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/nodemon/)[![Prettier](https://img.shields.io/badge/Package-Prettier-0000ff?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/prettier/)[![Socket.io](https://img.shields.io/badge/Package-Socketio-0080ff?style=plastic&logo=npm&logoWidth=10)](https://socket.io/docs/v4/)[![Draggable.js](https://img.shields.io/badge/Package-Draggable-00ffff?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/draggable/)[![GSAP](https://img.shields.io/badge/Package-GSAP-00ff80?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/gsap/)[![Render](https://img.shields.io/badge/Deployment-Name-00ff00?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/connect-session-sequelize/)[![VS Code](https://img.shields.io/badge/IDE-VSCode-80ff00?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://render.com/)[![PokemonTCGApi](https://img.shields.io/badge/API-PokemonTCG-ffff00?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://pokemontcg.io/)[![jQuery](https://img.shields.io/badge/API-jQuery-ff8000?style=plastic&logo=jQuery&logoWidth=10)](https://jquery.com/)
 
 </div>
 
