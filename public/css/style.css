@@ -18,7 +18,7 @@
 * TYPOGRAPHY 
 
 * COMPONENTS
- ## Component One
+ ## Deckbuilder
  ## Component Two
  ## Component Three
  ## Component Four
@@ -58,11 +58,9 @@
 \* -----------------------------------------------------------  */
 
 @font-face {
-  font-family: "Pokemon GB";
-  src: url("../fonts/Pokemon_GB.eot") format("eot"),
-    url("../fonts/Pokemon_GB.woff") format("woff"),
-    url("../fonts/Pokemon_GB.ttf") format("truetype"),
-    url("../fonts/Pokemon_GB.svg") format("svg");
+  font-family: 'Pokemon GB';
+  src: url('../fonts/Pokemon_GB.eot') format('eot'), url('../fonts/Pokemon_GB.woff') format('woff'),
+    url('../fonts/Pokemon_GB.ttf') format('truetype'), url('../fonts/Pokemon_GB.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -89,6 +87,25 @@ main {
 *                          Components                            *
 \* -----------------------------------------------------------  */
 
+/* DECK BUILDER */
+
+.container-column {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 300px;
+}
+.pokemon-card {
+  cursor: grab;
+  margin: 5px;
+}
+#right-column {
+  background-color: #f9f9f9;
+  border: 2px dashed #ccc;
+  height: 100%;
+}
+.dragging {
+  opacity: 0.5;
+}
 /* ============================================================ *\
 *                           Helpers                              *
 \* -----------------------------------------------------------  */

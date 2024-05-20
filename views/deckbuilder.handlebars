@@ -1,0 +1,15 @@
+    <div class="row">
+      <div class="col s6 container-column" id="left-column">
+        <div class="row">
+        {{#each cards}}
+          <div class="col s5 pokemon-card card">
+            {{> card }}
+          </div>
+        {{/each}}</div>
+      </div>
+      <div class="col s6 container-column empty-column" id="right-column">
+        <!-- Drop target for cards -->
+      </div>
+    </div>
+      <script type="module"  src="/js/deckBuilder.js"></script>
+
