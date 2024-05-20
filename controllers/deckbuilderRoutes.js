@@ -20,6 +20,7 @@ router.get('/', apiGuard, async (req, res) => {
     res.render('deckbuilder', {
       cards,
       decks,
+      loggedIn: req.session.user_id
     })
   } catch (err) {
     res.status(500).json(err)

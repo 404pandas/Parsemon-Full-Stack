@@ -45,10 +45,10 @@ $(document).ready(function () {
       },
     })
   })
-})
 
-// Create a new deck
-$(document).ready(function () {
+
+  // Create a new deck
+
   $('#create-deck-btn').click(function () {
     const deckName = $('#deck-name-input').val() // Move this line here
 
@@ -108,10 +108,10 @@ $(document).ready(function () {
         location.reload()
       })
   })
-})
 
-// Load deck
-$(document).ready(function () {
+
+  // Load deck
+
   const leftColumn = $('#left-column')
   const rightColumn = $('#right-column')
 
@@ -234,21 +234,21 @@ $(document).ready(function () {
     // Return the count (optional)
     return count
   })
-})
 
-$(document).on('click', '.toggle-btn.remove-card', function () {
-  const selectedCard = $(this).parent('.pokemon-card')
-  // Ensure selectedCard exists
-  if (selectedCard.length > 0) {
-    selectedCard.remove()
-    const count = $('#right-column').find('.pokemon-card').length
-    const span = $('#card-count')
-    console.log('Card removed:', selectedCard)
-    span.text(count)
-  } else {
-    console.log('Unable to find parent card element.')
-  }
-})
-$(document).ready(function () {
+
+  $(document).on('click', '.toggle-btn.remove-card', function () {
+    const selectedCard = $(this).parent('.pokemon-card')
+    // Ensure selectedCard exists
+    if (selectedCard.length > 0) {
+      selectedCard.remove()
+      const count = $('#right-column').find('.pokemon-card').length
+      const span = $('#card-count')
+      console.log('Card removed:', selectedCard)
+      span.text(count)
+    } else {
+      console.log('Unable to find parent card element.')
+    }
+  })
+
   $('.carousel').carousel()
 })
