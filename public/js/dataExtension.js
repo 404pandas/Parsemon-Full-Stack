@@ -1,10 +1,8 @@
 const dataExtensionFormHandler = async function (event) {
-  event.preventDefault();
+  event.preventDefault()
 
-  const dataId = document.querySelector('input[name="data-id"]').value;
-  const body = document.querySelector(
-    'textarea[name="dataExtension-body"]'
-  ).value;
+  const dataId = document.querySelector('input[name="data-id"]').value
+  const body = document.querySelector('textarea[name="dataExtension-body"]').value
 
   if (body) {
     const response = await fetch('/api/dataExtension', {
@@ -16,16 +14,16 @@ const dataExtensionFormHandler = async function (event) {
       headers: {
         'Content-Type': 'application/json',
       },
-    });
+    })
 
     if (response.ok) {
-      document.location.reload();
+      document.location.reload()
     } else {
-      document.location.replace('/login');
+      document.location.replace('/login')
     }
   }
-};
+}
 
 document
   .querySelector('#new-dataExtension-form')
-  .addEventListener('submit', dataExtensionFormHandler);
+  .addEventListener('submit', dataExtensionFormHandler)

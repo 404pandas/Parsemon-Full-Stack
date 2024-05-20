@@ -6,67 +6,97 @@ class Card extends Model {}
 Card.init(
   {
     id: {
-      type: DataTypes.UUID,
-      primaryKey: true,
+      type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
     name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    imageUrl: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    imageUrlHiRes: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     supertype: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
-    subtype: {
-      type: DataTypes.STRING,
+    subtypes: {
+      type: DataTypes.ARRAY(DataTypes.TEXT),
+      allowNull: true,
+    },
+    level: {
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
     hp: {
-      type: DataTypes.STRING,
-    },
-    number: {
-      type: DataTypes.STRING,
-    },
-    artist: {
-      type: DataTypes.STRING,
-    },
-    rarity: {
-      type: DataTypes.STRING,
-    },
-    series: {
-      type: DataTypes.STRING,
-    },
-    set: {
-      type: DataTypes.STRING,
-    },
-    setCode: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
     types: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.ARRAY(DataTypes.TEXT),
+      allowNull: true,
     },
     evolvesFrom: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    abilities: {
+      type: DataTypes.JSONB,
+      allowNull: true,
     },
     attacks: {
-      type: DataTypes.JSONB, // Assuming attacks will be stored as JSON
+      type: DataTypes.JSONB,
+      allowNull: true,
     },
     weaknesses: {
-      type: DataTypes.JSONB, // Assuming weaknesses will be stored as JSON
+      type: DataTypes.JSONB,
+      allowNull: true,
     },
     retreatCost: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.ARRAY(DataTypes.TEXT),
+      allowNull: true,
     },
-    resistances: {
-      type: DataTypes.JSONB, // Assuming resistances will be stored as JSON
+    convertedRetreatCost: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    set: {
+      type: DataTypes.JSONB,
+      allowNull: false,
+    },
+    number: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    artist: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    rarity: {
+      type: DataTypes.TEXT,
+    },
+    flavorText: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
+    nationalPokedexNumbers: {
+      type: DataTypes.ARRAY(DataTypes.INTEGER),
+      allowNull: true,
+    },
+    legalities: {
+      type: DataTypes.JSONB,
+      allowNull: false,
+    },
+    images: {
+      type: DataTypes.JSONB,
+      allowNull: false,
+    },
+    tcgplayer: {
+      type: DataTypes.JSONB,
+      allowNull: true,
+    },
+    cardmarket: {
+      type: DataTypes.JSONB,
+      allowNull: true,
     },
   },
   {
