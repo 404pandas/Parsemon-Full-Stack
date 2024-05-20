@@ -1,0 +1,51 @@
+<!-- views/partials/card.handlebars -->
+<div class='card'>
+  <!-- Toggle button for adding/removing from the right column -->
+  <button class='toggle-btn'>{{#if isInRightColumn}}-{{else}}+{{/if}}</button>
+
+  <div class='card-image'>
+    <img src='{{images.large}}' />
+    <span class='card-title'>
+      {{name}}
+      <button class='more-btn'>
+        <i class='material-icons info-icon' style='cursor: pointer;'>info_outline</i>
+      </button>
+    </span>
+  </div>
+
+  <div class='card-content' style='display: none;'>
+    <p><strong>Supertype:</strong> {{supertype}}</p>
+    <p><strong>Subtypes:</strong> {{subtypes}}</p>
+    <p><strong>Level:</strong> {{level}}</p>
+    <p><strong>HP:</strong> {{hp}}</p>
+    <p><strong>Types:</strong> {{types}}</p>
+    <p><strong>Evolves From:</strong> {{evolvesFrom}}</p>
+    <p><strong>Abilities:</strong></p>
+    <ul>
+      {{#each abilities}}
+        <li><strong>{{name}}:</strong> {{text}}</li>
+      {{/each}}
+    </ul>
+    <p><strong>Attacks:</strong></p>
+    <ul>
+      {{#each attacks}}
+        <li><strong>{{name}}:</strong> {{text}} ({{damage}})</li>
+      {{/each}}
+    </ul>
+    <p><strong>Weaknesses:</strong></p>
+    <ul>
+      {{#each weaknesses}}
+        <li><strong>{{type}}:</strong> {{value}}</li>
+      {{/each}}
+    </ul>
+    <p><strong>Retreat Cost:</strong> {{retreatCost}}</p>
+    <p><strong>Rarity:</strong> {{rarity}}</p>
+    <p><strong>Flavor Text:</strong> {{flavorText}}</p>
+    <p><strong>Set:</strong> {{set.name}}</p>
+    <p><strong>Artist:</strong> {{artist}}</p>
+    <p><strong>TCGPlayer Price:</strong> ${{tcgplayer.prices.holofoil.market}}</p>
+  </div>
+  <div class='card-action'>
+    <a href='{{tcgplayer.url}}' target='_blank'>View on TCGPlayer</a>
+  </div>
+</div>

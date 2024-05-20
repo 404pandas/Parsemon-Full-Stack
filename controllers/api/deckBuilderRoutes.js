@@ -4,7 +4,7 @@ const { apiGuard } = require('../../utils/authGuard')
 // Updating deck - drag in drag out on right hand side
 router.put('/:id', apiGuard, async (req, res) => {
   try {
-    const [affectedRows] = await Data.update(req.body, {
+    const [affectedRows] = await Deck.update(req.body, {
       where: {
         id: req.params.id,
       },
@@ -19,4 +19,4 @@ router.put('/:id', apiGuard, async (req, res) => {
     res.status(500).json(err)
   }
 })
-// get card - for all cards on left hand side
+module.exports = router
