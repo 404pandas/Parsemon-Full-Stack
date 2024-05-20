@@ -88,7 +88,10 @@ main {
 \* -----------------------------------------------------------  */
 
 /* DECK BUILDER */
-
+.builder-column {
+  max-height: 100vh;
+  overflow-y: scroll;
+}
 .container-column {
   border: 1px solid #ccc;
   padding: 10px;
