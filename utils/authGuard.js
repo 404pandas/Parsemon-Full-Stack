@@ -1,26 +1,26 @@
 const withGuard = (req, res, next) => {
   // If the user is not logged in, redirect the request to the login route
   if (!req.session.logged_in) {
-    res.redirect('/login');
+    res.redirect('/login')
   } else {
-    next();
+    next()
   }
-};
+}
 
 const apiGuard = (req, res, next) => {
   if (!req.session.logged_in) {
-    res.status(403).json({ msg: 'you must login to perform this action' });
+    res.redirect('/login')
   } else {
-    next();
+    next()
   }
-};
+}
 
 const withoutGuard = (req, res, next) => {
   if (!req.session.logged_in) {
-    next();
+    next()
   } else {
-    res.redirect('/');
+    res.redirect('/')
   }
-};
+}
 
-module.exports = { withGuard, apiGuard, withoutGuard };
+module.exports = { withGuard, apiGuard, withoutGuard }

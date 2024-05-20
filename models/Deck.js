@@ -17,10 +17,17 @@ Deck.init(
     },
     totalCards: {
       type: DataTypes.INTEGER,
-      defaultValue: 60,
       validate: {
         min: 60,
         max: 60,
+      },
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
       },
     },
 

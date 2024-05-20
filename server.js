@@ -17,7 +17,7 @@ const hbs = exphbs.create({ helpers })
 const sess = {
   secret: 'Gotta catch em all',
   cookie: {
-    maxAge: 300000,
+    maxAge: 300000000000000,
     httpOnly: true,
     secure: false,
     sameSite: 'strict',

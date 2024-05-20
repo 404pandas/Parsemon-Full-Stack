@@ -1,15 +1,59 @@
-    <div class="row">
-      <div class="col s6 container-column" id="left-column">
-        <div class="row">
-        {{#each cards}}
-          <div class="col s5 pokemon-card card">
-            {{> card }}
+<div class="row">
+  <div class="col s12">
+      <h1>Your Decks</h1>
+     <div id="deck-carousel" class="carousel">
+      {{#if decks}}
+        {{#each decks}}
+          <a class="carousel-item {{#if @first}}active{{/if}}" data-deck-id="{{id}}" href="#{{indexToWord @index}}!">{{name}}</a>
+        {{/each}}
+        <div id="deck-cards">
+          <div class="row">
+            {{#each decks.cards}}
+              <div class="col s3">
+                <div class="card">
+                  <div class="card-content">
+                    <span class="card-title">{{name}}</span>
+                    <p>Quantity: {{quantity}}</p>
+                    <p>Type: {{type}}</p>
+                  </div>
+                </div>
+              </div>
+            {{/each}}
+            </div>
           </div>
-        {{/each}}</div>
+      {{else}}
+         <p>You have no decks.</p>
+      {{/if}}
       </div>
-      <div class="col s6 container-column empty-column" id="right-column">
-        <!-- Drop target for cards -->
       </div>
+     
+
+
+  <div class="col s6 container-column builder-column" id="left-column">
+    <div class="row">
+    {{#each cards}}
+      <div class="col s5 pokemon-card card">
+        {{> card }}
+      </div>
+    {{/each}}
     </div>
-      <script type="module"  src="/js/deckBuilder.js"></script>
+  </div>
+  <div class="col s6 container-column empty-column builder-column" id="right-column">
+  <div class="row">
+    <input type="text" id="deck-name-input" placeholder="New Deck Name">
+     <div class="card-counter">
+    Total Cards: <span id="card-count">0</span>
+  </div>
+    <button id="save-deck-btn" class="btn waves-effect waves-light" type="button">Update</button>
+        <button id="create-deck-btn" class="btn waves-effect waves-light" type="button">Create</button>
+        
+
+  </div>
+  <div class="row"><button id="error-button" style="display: none;">Error Details</button>
+<div id="error-details" style="display: none;"></div>
+</div>
+    <!-- Drop target for cards -->
+  </div>
+</div>
+  <script type="module"  src="/js/deckBuilder.js"></script>
 
