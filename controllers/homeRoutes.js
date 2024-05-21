@@ -1,40 +1,10 @@
 const router = require('express').Router()
-const { Data, DataExtension, User } = require('../models/')
+const { Card, Deck, User } = require('../models/')
 const { withGuard, withoutGuard } = require('../utils/authGuard')
 
 router.get('/', async (req, res) => {
   try {
-    const dataData = await Data.findAll({
-      include: [User],
-    })
-
-    const datas = dataData.map((data) => data.get({ plain: true }))
-
-    res.render('home', { datas, loggedIn: req.session.logged_in })
-  } catch (err) {
-    res.status(500).json(err)
-  }
-})
-
-router.get('/data/:id', async (req, res) => {
-  try {
-    const dataData = await Data.findByPk(req.params.id, {
-      include: [
-        User,
-        {
-          model: DataExtension,
-          include: [User],
-        },
-      ],
-    })
-
-    if (dataData) {
-      const data = dataData.get({ plain: true })
-      console.log(data.DataExtensions)
-      res.render('data', { data, loggedIn: req.session.logged_in })
-    } else {
-      res.status(404).end()
-    }
+    res.render('home', { loggedIn: req.session.logged_in })
   } catch (err) {
     res.status(500).json(err)
   }
@@ -54,6 +24,36 @@ router.get('/signup', withoutGuard, (req, res) => {
   } catch (err) {
     res.status(500).json(err)
   }
+})
+
+router.get('/deckbuilder', withGuard, async (req, res) => {
+  try {
+    const cardData = await Card.findAll()
+
+    const cards = cardData.map((card) => card.get({ plain: true }))
+
+    const deckData = await Deck.findAll({
+      where: {
+        userId: req.session.user_id,
+      },
+    })
+
+    const decks = deckData.map((deck) => deck.get({ plain: true }))
+
+    res.render('deckbuilder', {
+      cards,
+      decks,
+      loggedIn: req.session.user_id
+    })
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+
+router.get('/dashboard', withGuard, async (req, res) => {
+  res.render('dashboard', {
+    loggedIn: req.session.user_id
+  })
 })
 
 module.exports = router

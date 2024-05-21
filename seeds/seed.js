@@ -1,9 +1,7 @@
 const sequelize = require('../config/connection')
-const { User, Deck, Card, DataExtension } = require('../models')
+const { User, Deck, Card } = require('../models')
 
 const userData = require('./userData.json')
-const deckData = require('./deckData.json')
-const dataExtensionData = require('./dataExtensionData.json')
 const cardData = require('./cardData.json')
 
 const seedDatabase = async () => {
@@ -28,13 +26,13 @@ const seedDatabase = async () => {
     ),
   )
 
-  for (const dataExtension of dataExtensionData) {
-    await DataExtension.create({
-      ...dataExtension,
-      userId: users[Math.floor(Math.random() * users.length)].id,
-      deckId: decks[Math.floor(Math.random() * decks.length)].id,
-    })
-  }
+  // for (const dataExtension of dataExtensionData) {
+  //   await DataExtension.create({
+  //     ...dataExtension,
+  //     userId: users[Math.floor(Math.random() * users.length)].id,
+  //     deckId: decks[Math.floor(Math.random() * decks.length)].id,
+  //   })
+  // }
 
   process.exit(0)
 }
