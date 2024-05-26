@@ -237,14 +237,18 @@ $(document).ready(function () {
 
 
   $(document).on('click', '.toggle-btn.remove-card', function () {
+    console.log("delete ran")
     const selectedCard = $(this).parent('.pokemon-card')
+    console.log(selectedCard[0])
     // Ensure selectedCard exists
     if (selectedCard.length > 0) {
-      selectedCard.remove()
+      selectedCard[0].remove()
       const count = $('#right-column').find('.pokemon-card').length
       const span = $('#card-count')
+      console.log(count)
+      console.log(span)
       console.log('Card removed:', selectedCard)
-      span.text(count)
+      span.val(count)
     } else {
       console.log('Unable to find parent card element.')
     }
